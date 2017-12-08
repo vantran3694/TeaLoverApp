@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="TeaLoverApp.TeaLoverApp" android:versionCode="1" android:versionName="1.0">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="21" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="FacebookAuth" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_application_id" />
+    <activity android:icon="@drawable/icon" android:label="TeaLoverApp" android:theme="@style/MyTheme" android:name="md5b7e115077c9deabd61813d2c4e739ced.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:icon="@drawable/icon" android:label="ConditionActivity" android:theme="@style/MyTheme" android:name="md5a39944888a76801d145b667c3f43c762.ConditionActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:scheme="condition" />
+      </intent-filter>
+    </activity>
+    <activity android:label="DashBoard" android:theme="@style/MyTheme" android:name="md5a39944888a76801d145b667c3f43c762.DashBoard" />
+    <activity android:label="Login_RegisterActivity" android:theme="@style/MyTheme" android:name="md5a39944888a76801d145b667c3f43c762.AccountActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="FacebookActivity" android:name="md5a39944888a76801d145b667c3f43c762.FacebookActivity" />
+    <activity android:label="ForgotPassword" android:theme="@style/MyTheme" android:name="md5a39944888a76801d145b667c3f43c762.ForgotPassword" />
+    <activity android:label="LoginActivity" android:theme="@style/MyTheme" android:name="md5a39944888a76801d145b667c3f43c762.LoginActivity" />
+    <activity android:label="RegisterActivity" android:theme="@style/MyTheme" android:name="md5a39944888a76801d145b667c3f43c762.RegisterActivity" />
+    <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="TeaLoverApp.TeaLoverApp.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.TeaLoverApp.TeaLoverApp" />
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:theme="@style/com_facebook_activity_theme" />
+    <activity android:name="com.facebook.CustomTabMainActivity" />
+    <!--
+         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+         with the application context. This config is merged in with the host app's manifest,
+         but there can only be one provider with the same authority activated at any given
+         point; so if the end user has two or more different apps that use Facebook SDK, only the
+         first one will be able to use the provider. To work around this problem, we use the
+         following placeholder in the authority to identify each host application as if it was
+         a completely different provider.
+        -->
+    <provider android:name="com.facebook.internal.FacebookInitProvider" android:authorities="TeaLoverApp.TeaLoverApp.FacebookInitProvider" android:exported="false" />
+    <provider android:authorities="TeaLoverApp.TeaLoverApp.firebaseinitprovider" android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:initOrder="100" />
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+  </application>
+  <application android:allowBackup="true" android:label="@string/app_name">
+    <intent-filter>
+      <action android:name="android.intent.action.VIEW" />
+      <category android:name="android.intent.category.DEFAULT" />
+      <data android:scheme="condition" />
+    </intent-filter>
+  </application>
+  <meta-data android:name="android.support.VERSION" android:value="25.3.1" />
+</manifest>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "179824068904",
+    "firebase_url": "https://tealover-ad9e4.firebaseio.com",
+    "project_id": "tealover-ad9e4",
+    "storage_bucket": "tealover-ad9e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179824068904:android:4ab6e50e537bae9f",
+        "android_client_info": {
+          "package_name": "TeaLoverApp.TeaLoverApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179824068904-npfqs1ib6egbkd3eqgtn7jp9cuu25jud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAwOZA1xf142rAvRZcFIITRgs0GAEPllM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

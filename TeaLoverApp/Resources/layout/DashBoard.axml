@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_dashboard">
+    <TextView
+        android:id="@+id/dashboard_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/dashboard_welcome"
+        android:id="@+id/dashboard_input_newpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/dasboard_new_password"
+            android:hint="New password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:layout_below="@+id/dashboard_input_newpassword"
+        android:id="@+id/dashboard_button_change_password"
+        android:text="Change password"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@+id/dashboard_button_change_password"
+        android:id="@+id/dashboard_button_logout"
+        android:text="Logout"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
